@@ -6,14 +6,15 @@ body {
     padding: 0;
 }
 
+/* Main header */
 h1 {
-    color: #4d0000; /* Dark USC Garnet */
+    color: #4d0000; /* Dark Garnet */
     text-align: center;
     font-size: 3rem;
     margin-top: 40px;
 }
 
-/* Section Headers */
+/* Section headers */
 h2 {
     text-align: center;
     color: #990000;
@@ -21,8 +22,10 @@ h2 {
     font-size: 2rem;
 }
 
-/* Improve spacing & structure */
-.about, .skills, .contact {
+/* ---------- MAIN CONTENT SECTIONS ---------- */
+.about, 
+.skills, 
+.contact {
     max-width: 900px;
     margin: auto;
     background: #ffffff;
@@ -32,13 +35,16 @@ h2 {
     margin-top: 40px;
 }
 
-.about p, .skills ul, .contact p {
+/* Paragraph & list formatting */
+.about p,
+.skills ul,
+.contact p {
     font-size: 1.2em;
     line-height: 1.7;
     text-align: center;
 }
 
-/* ---------- SKILLS SECTION ---------- */
+/* ---------- SKILLS (RESUME) SECTION ---------- */
 .skills ul {
     list-style: none;
     padding: 0;
@@ -59,7 +65,7 @@ h2 {
     text-decoration: underline;
 }
 
-/* ---------- PROJECT GRID ---------- */
+/* ---------- PROJECTS GRID ---------- */
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -68,7 +74,7 @@ h2 {
     padding: 40px 20px;
 }
 
-/* Project Cards */
+/* Project card layout */
 .project {
     width: 42%;
     min-width: 330px;
@@ -97,7 +103,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Images */
+/* Project Images */
 .project img {
     width: 100%;
     border-radius: 12px;
@@ -105,7 +111,7 @@ h2 {
     border: 2px solid #990000;
 }
 
-/* Project text */
+/* Project Paragraph */
 .project p {
     background: #fafafa;
     padding: 12px;
@@ -113,6 +119,24 @@ h2 {
     font-size: 1.1em;
     color: #333;
     line-height: 1.6;
+}
+
+/* ---------- REPO LINK BUTTON ---------- */
+.repo-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 18px;
+    background: #990000; /* USC Garnet */
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.repo-link:hover {
+    background: #7a0000;
+    transform: scale(1.03);
 }
 
 /* ---------- CONTACT SECTION ---------- */
