@@ -1,57 +1,138 @@
+/* ---------- GLOBAL STYLES ---------- */
 body {
-    background: gainsboro;
+    background: #f0f0f0;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    color: black;
+    color: #4d0000; /* Dark USC Garnet */
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 40px;
+}
+
+/* Section Headers */
+h2 {
+    text-align: center;
+    color: #990000;
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+/* Improve spacing & structure */
+.about, .skills, .contact {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.about p, .skills ul, .contact p {
+    font-size: 1.2em;
+    line-height: 1.7;
     text-align: center;
 }
 
-/* Keep projects side by side but give them more room */
+/* ---------- SKILLS SECTION ---------- */
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin: 12px 0;
+}
+
+.skills a {
+    color: #990000;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.skills a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- PROJECT GRID ---------- */
 .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* centers the cards */
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
 }
 
-/* Project cards */
+/* Project Cards */
 .project {
-    width: 40%;
-    min-width: 320px; /* prevents text from getting squished */
-    margin: 10px;
-    padding: 20px;
-    background: white;
-    border-radius: 15px; /* smoother shape than 25% circle */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 42%;
+    min-width: 330px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Title inside each project */
-.project h3, .project h4, .project h5 {
-    color: #990000; /* USC Garnet */
-    text-align: center;
+/* Hover animation */
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Project Titles */
+.project h3,
+.project h4,
+.project h5 {
+    color: #990000;
     border-bottom: 2px solid #990000;
     display: inline-block;
     padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-/* Image styling */
+/* Images */
 .project img {
     width: 100%;
-    height: auto;
-    margin: 10px 0;
-    border: 2px solid rgb(126, 14, 56);
-    border-radius: 10px;
+    border-radius: 12px;
+    margin-top: 10px;
+    border: 2px solid #990000;
 }
 
-/* Text readability */
+/* Project text */
 .project p {
+    background: #fafafa;
+    padding: 12px;
+    border-radius: 10px;
     font-size: 1.1em;
     color: #333;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+.contact p {
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .project {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
 }
